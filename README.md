@@ -30,4 +30,3 @@
 * bind in *JS*.
 * getter, setter and stack overflow.
 * Lexical Scoping and Closure.
-*
