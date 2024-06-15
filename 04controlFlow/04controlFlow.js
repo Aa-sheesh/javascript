@@ -45,4 +45,4 @@
 // console.log(val1);//10
 
 //Terinary Operator
-condition?true:false; 
+// condition?true:false; 
