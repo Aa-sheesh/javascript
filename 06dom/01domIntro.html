@@ -5,13 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Learning</title>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class="heading">DOM Learning with Aashish.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, doloremque.</p>
+<body class="bg-black">
+    <div class="">
+        <style>
+            .bg-black{
+                background-color: rgb(35, 35, 35);
+                color: white;
+                padding: 10px;
+            }
+        </style>
+        <h1 id="title" class="heading">DOM Learning with Aashish.<span style="display: none;"> test text</span></h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, doloremque. </p>
+        <input type="password" name="" id="">
+        <ul>
+            <li class="list-item">Lorem ipsum dolor sit.</li>
+            <li class="list-item">Lorem ipsum dolor sit.</li>
+            <li class="list-item">Lorem ipsum dolor sit.</li>
+        </ul>
     </div>
 </body>
 </html>
 
-//console.log(document);//It will show the whole document in the console.
-//console.dir(document);//It will show the whole document in the console in the form of directory.
+<!-- ###############################################1.Introduction to DOM(Document Object Model):######################################################## -->
+<!-- console.log(document);//It will show the whole document in the console.
+console.dir(document);//It will show the whole document in the console in the form of directory. -->
+
+<!-- ###############################################2.DOM Selectors, NodeList and HTMLCollection########################################################-->
+<!-- DOM Selectors:
+
+1. Single Element Selector
+document.getElementById()
+document.querySelector()
+
+2. Multiple Element Selector
+document.getElementsByClassName()
+document.getElementsByTagName()
+document.querySelectorAll()
+
+Examples:
+1.
+document.getElementById('title').style.color="red";
+2.
+document.querySelector('h1').innerText;//It will return the inner text of the h1 tag.
+document.querySelector('h1').innerHTML;//It will return the inner HTML of the h1 tag.
+document.querySelector('h1').textContent;//It will return the text content of the h1 tag. -->
+
+<!-- HTML collection: It is a collection of HTML elements. HTML collection is not an array but it is similar to an array. HTML collection is a collection of HTML elements that are returned by methods like getElementsByClassName() and getElementsByTagName(). -->
+<!-- tempLiList=document.getElementsByClassName('heading')-->
+<!-- NodeList: It is a collection of nodes. NodeList is not an array but it is similar to an array. NodeList is a collection of nodes that are returned by methods like querySelectorAll(). -->
+<!-- tempLiList=document.querySelectorAll('li')
+//NodeList(3) [li, li, li]
+tempLiList[0].style.color="green";//It will change the color of the first li element to green.
+tempLiList.forEach((item)=>{item.style.color="green"});//Changes the color of all the li elements to green. -->
+
+<!-- Converting HTMLCollection to Array: -->
+<!-- document.getElementsByClassName('list-item');//It will return the HTMLCollection of the li elements.
+let tempLiList=document.getElementsByClassName('list-item')//It will store the HTMLCollection of the li elements in the tempLiList variable.
+let tempLiListArray=Array.from(tempLiList);//It will convert the HTMLCollection to an array.
+
+tempLiList.forEach((item)=>{item.style.color="red"})//It will give an error because HTMLCollection is not an array.
+tempLiListArray.forEach((item)=>{item.style.color="red"})//It will change the color of all the li elements to red. -->
