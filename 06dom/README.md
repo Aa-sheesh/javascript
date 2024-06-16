@@ -1,1 +1,1 @@
-![DOM tree for domIntro.html]('https://app.eraser.io/workspace/VlE04A3vaudAGgaAGm2V?origin=share')
+![DOM tree for domIntro.html](./domIntroimage.png)
