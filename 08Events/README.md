@@ -10,5 +10,4 @@
 | Blocks the flow of program. | Does not block execution. |
 | Reads file in sync. | Reads file in async. |
 
-
-![Async](./public/image.png)
+<img align="center" src="./public/image.png" width="60%">
