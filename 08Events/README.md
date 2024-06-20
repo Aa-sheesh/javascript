@@ -16,5 +16,5 @@ _Execution one line of code at a time (Each operation waits for the lost one to 
 | Reads file in sync. | Reads file in async. |
 
 
-<img  src="./public/image.png" width="60%">
+<img  src="./public/image.png" width="80%">
 
