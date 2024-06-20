@@ -5,7 +5,7 @@ Link: `https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html`
 # Solutions
 
 ## Project 1:
-
+### Javascript Code
 ```javascript
 let buttons = document.querySelectorAll(".button");
 const body = document.querySelector("body");
@@ -20,11 +20,11 @@ buttons.forEach((button) => {
   });
 });
 ```
-
+### HTML Code
 ```html
     <span class="button" id="purple"></span>
 ```
-
+### CSS Code
 ```css
     #purple{
   background-color: purple;
