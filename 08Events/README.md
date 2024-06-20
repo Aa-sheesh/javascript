@@ -15,6 +15,6 @@ _Execution one line of code at a time (Each operation waits for the lost one to 
 | Blocks the flow of program. | Does not block execution. |
 | Reads file in sync. | Reads file in async. |
 
-<div align="center">
+
 <img  src="./public/image.png" width="60%">
-</div>
+
