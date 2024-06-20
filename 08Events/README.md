@@ -8,5 +8,5 @@
 | **Blocking Code** | **Non Blocking Code** |
 | :------------- | :----------------- |
 | Blocks the flow of program. | Does not block execution. |
-| Read file sync. | Read file async. |
-
+| Reads file in sync. | Reads file in async. |
+![Async](./public/image.png)
