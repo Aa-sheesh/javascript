@@ -10,6 +10,7 @@
       }
       img {
         border: solid white 5px;
+        border-radius: 5px;
       }
       h2 {
         display: flex;
@@ -82,22 +83,28 @@
 
     // attachEvent()
     // jQuery-on
-    
+
     // type, timestamp, preventDefault
     // target, toElement, srcElement, currentTarget
     // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keycode 
+    // altkey, ctrlkey, shiftkey, keycode
 
-    document.getElementById("images").addEventListener("click", function (e) {
-    //   console.log(e);
-      console.log("Clicked inside the ul tag");
-    },false);
-    document.getElementById("owl").addEventListener("click", function (e) {
-    //   console.log(e);
-      console.log("owl clicked");
-      
-    },true);
-
+    document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        //   console.log(e);
+        console.log("Clicked inside the ul tag");
+      },
+      false
+    );
+    document.getElementById("owl").addEventListener(
+      "click",
+      function (e) {
+        //   console.log(e);
+        console.log("owl clicked");
+      },
+      true
+    );
 
     // false/false:BUBBLING
     // Clicked inside the ul tag
@@ -115,21 +122,23 @@
     // owl clicked
     // Clicked inside the ul tag
 
-    document.getElementById("google").addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      console.log("Google clicked"); 
-    },false);
+    document.getElementById("google").addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("Google clicked");
+      },
+      false
+    );
 
-    document.querySelector('#images').addEventListener('click',(e)=>{
+    document.querySelector("#images").addEventListener("click", (e) => {
       console.log(e.target.parentNode);
-      if(e.target.tagName==='IMG'){
+      if (e.target.tagName === "IMG") {
         console.log(e.target.id);
         let removeIt = e.target.parentNode;
-        removeIt.parentNode.removeChild(removeIt); 
+        removeIt.parentNode.removeChild(removeIt);
       }
-      
-    })
-
+    });
   </script>
 </html>
