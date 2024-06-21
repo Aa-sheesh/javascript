@@ -22,6 +22,31 @@ _Execution one line of code at a time (Each operation waits for the lost one to 
 
 Link: `https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html`
 
+### Project 5:
+#### JavaScript Code:
+```javascript
+const insert = document.getElementById('insert')
+window.addEventListener('keydown',(e)=>{
+  insert.innerHTML=`
+    <div class="color">
+      <table>
+        <tr>
+          <th>Key</th>
+          <th>KeyCode</th>
+          <th>Code</th>
+        </tr>
+        <tr>
+          <td>${e.key===' '?'Space':e.key}</td>
+          <td>${e.keyCode}</td>
+          <td>${e.code}</td>
+        </tr>
+        
+      </table>
+    </div>
+  `
+})
+```
+
 ### Project 6:
 #### JavaScript Code:
 ```javascript
@@ -55,29 +80,4 @@ let stop = document.querySelector('#stop');
 stop.addEventListener('click', stopChangingColor);
 // console.log(randomColor());
 
-```
-
-### Project 5:
-#### JavaScript Code:
-```javascript
-const insert = document.getElementById('insert')
-window.addEventListener('keydown',(e)=>{
-  insert.innerHTML=`
-    <div class="color">
-      <table>
-        <tr>
-          <th>Key</th>
-          <th>KeyCode</th>
-          <th>Code</th>
-        </tr>
-        <tr>
-          <td>${e.key===' '?'Space':e.key}</td>
-          <td>${e.keyCode}</td>
-          <td>${e.code}</td>
-        </tr>
-        
-      </table>
-    </div>
-  `
-})
 ```
