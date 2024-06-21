@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JS | 2 Projects</title>
+  </head>
+  <body>
+    <h1>Async JS</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    //setTimeout- It is used to run a function after a certain amount of time
+    setTimeout(() => {
+      console.log("Aashish");
+    }, 2000);
+    const changeHead = () => {
+      document.querySelector("h1").innerHTML = "Hello";
+    };
+    // Store the identifier of the setTimeout
+    const timeoutId = setTimeout(changeHead, 4000);
+
+    //clearTimeout- It is used to stop the setTimeout function
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(timeoutId); // Use the identifier here
+      console.log("Stopped");
+    });
+    
+
+
+  </script>
+</html>
