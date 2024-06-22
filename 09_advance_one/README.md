@@ -38,8 +38,8 @@
 </table>
 
 ### V8 Engine
-*** Is console.log part of javascript? ***
-**Ans:**<br> 
+*** Is console.log part of javascript? ***<br/>
+**Ans:**<br/> 
 - No, when a website is loaded v8 api is loaded into it and console.log comes from the api and many other functionalities.
 - Javascript is a wrapper that is built on C++. <br/>
 Link to v8: `https://v8.dev/`
