@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS | API Request</title>
-</head>
-<body>
-    
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS | API Request & V8 Engine</title>
+    <style>
+        
+    </style>
+  </head>
+  <body>
+    <div id="info">
+      <div id="avatar">
+        <h2 style="text-decoration: underline">Personal Information</h2>
+        <img src="" alt="" srcset="" width="100px" height="100px" />
+      </div>
+      <div id="name">
+        <p></p>
+      </div>
+      <div>
+        <h3>Bio:</h3>
+        <p id="bio"></p>
+      </div>
+    </div>
+    <div id="follow">
+      <h3>Followers:<span id="followers"></span></h3>
+      <h3>Following:<span id="following"></span></h3>
+      <a target="_blank" id="visit">Visit</a>
+    </div>
+  </body>
+  <script>
+    const url = "https://api.github.com/users/Aa-sheesh";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    // console.log(xhr.readyState);
+    let data;
+    xhr.onreadystatechange = function () {
+      // console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        data = JSON.parse(this.responseText);
+        console.log(data);
+        // console.log(data.avatar_url);
+        // Avatar added
+        const avatar = document.querySelector("img");
+        avatar.src = data.avatar_url;
+
+        //name added
+        const name = document.getElementById("name").querySelector("p");
+        name.innerHTML = data.name;
+
+        //bio added
+        const bio = document.getElementById("bio");
+        bio.innerHTML = data.bio;
+
+        //followers and following and link added
+        const followers = document.getElementById("followers");
+        followers.innerHTML = data.followers;
+        const following = document.getElementById("following");
+        following.innerHTML = data.following;
+        const visit = document.getElementById("visit");
+        visit.href = data.html_url;
+      }
+    };
+    xhr.send();
+  </script>
 </html>
