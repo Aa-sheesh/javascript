@@ -1,4 +1,9 @@
 ## APIs
+### How APIs work?
+![API cycle](image.png) 
+
+### Fetch Cycle:
+![Fetch Cycle](fetchCycel.png)
 ### XMLHttpRequest API:
 <table>
   <thead>
