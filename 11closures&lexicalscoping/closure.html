@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS | Closure and Lexical Scoping</title>
+  </head>
+  <body style="background-color: #313131">
+    <h2 style="color: aliceblue">JS | Closure and Lexical Scoping</h2>
+    <button id="Violet">Violet</button>
+    <button id="Indigo">Indigo</button>
+    <button id="Blue">Blue</button>
+    <button id="Green">Green</button>
+    <button id="Yellow">Yellow</button>
+    <button id="Orange">Orange</button>
+    <button id="Red">Red</button>
+  </body>
+  <script>
+    //Lexical Scoping - The inner function can access the variables of the outer function
+    // function outer() {
+    //   let username = "Aashish";
+    //   function inner() {
+    //     console.log(`INNER : ${username}`);
+    //   }
+    // }
+    // outer();
+    // console.log(`TOO OUTER : ${username}`);
+
+    //Closure - The inner function can access the variables of the outer function even after the outer function has returned
+    // function outer() {
+    //   let username = "Aashish";
+    //   function inner() {
+    //     console.log(`INNER : ${username}`);
+    //   }
+    //   return inner;
+    // }
+    // let innerFn = outer();
+    // innerFn();
+  </script>
+  <script>
+    // Practical Example of Closure
+    function clickHandler(color) {
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    }
+    document.getElementById("Violet").addEventListener("click", clickHandler("violet"));
+    document.getElementById("Indigo").addEventListener("click", clickHandler("indigo"));
+    document.getElementById("Blue").addEventListener("click", clickHandler("blue"));
+    document.getElementById("Green").addEventListener("click", clickHandler("green"));
+    document.getElementById("Yellow").addEventListener("click", clickHandler("yellow"));
+    document.getElementById("Orange").addEventListener("click", clickHandler("orange"));
+    document.getElementById("Red").addEventListener("click", clickHandler("red"));
+    
+    //More optimized Way
+    // function clickHandler(color) {
+    //   return function () {
+    //     document.body.style.backgroundColor = `${color}`;
+    //   };
+    // }
+    // let myArray = Array.from(document.querySelectorAll('button'))
+    // myArray.map((button)=>{
+    //     document.getElementById(button.id).addEventListener('click', clickHandler(button.id))
+    // })
+  </script>
+</html>
